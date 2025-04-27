@@ -1,0 +1,27 @@
+{
+    "RODOS New StaticThread": {
+      "prefix": ["rst", "rthread"],
+      "body": [
+        "class ${1:MyClass} : public StaticThread<>",
+        "{",
+        "private:",
+        "    const char *threadname;",
+        "",
+        "public:",
+        "    ${1:MyClass}(const char *name) : StaticThread<>(name), threadname(name) {}",
+        "",
+        "    void init()",
+        "    {",
+        "        ${2:return;}",
+        "    }",
+        "",
+        "    void run()",
+        "    {",
+        "        ${3:return;}",
+        "    }",
+        "};"
+      ],
+      "description": "Creates RODOS Static Thread Class"
+    }
+  }
+  
